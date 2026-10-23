@@ -40,7 +40,7 @@ public class Contrat {
     @ToString.Exclude
     private Reservation reservation;
 
-    @OneToMany(mappedBy = "contrat", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "contrat", cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
     @ToString.Exclude
     @Builder.Default
     private List<Paiement> paiements = new ArrayList<>();
